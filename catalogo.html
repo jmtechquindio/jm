@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JM-Tech - Catálogo</title>
+  <!-- Enlazar estilos CSS -->
+  <link rel="stylesheet" href="css/estilos.css" />
+  <script src="js/image_helper.js" defer></script> <!-- Script Ayudante de Imágenes -->
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>JM-Tech</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html" class="active">Catálogo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Catálogo de Productos</h2>
+      <input
+        type="text"
+        id="filtro-productos"
+        placeholder="Buscar producto..."
+        aria-label="Buscar productos"
+      />
+
+      <!-- Sección de Equipos Nuevos Eco-Amigables -->
+      <h3>Equipos Nuevos</h3>
+      <div class="productos-lista">
+        <article class="producto-card">
+          <img src="images/laptop_nueva_eco.jpg" alt="Laptop Nueva Eco-Amigable" />
+          <h3>Laptop EcoBook Pro (Nueva)</h3>
+          <p>Diseño ligero y eficiente, fabricada con materiales reciclados. Ideal para profesionales conscientes del medio ambiente.</p>
+          <p><strong>Precio:</strong> $3,100,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/pc_nuevo_gaming_eco.jpg" alt="PC Nuevo Gaming Eco" />
+          <h3>PC Desktop GreenPower (Nuevo)</h3>
+          <p>Potente rendimiento con certificación Energy Star. Componentes de bajo consumo y empaque biodegradable.</p>
+          <p><strong>Precio:</strong> $2,800,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_new_eco.jpg" alt="Laptop Ultra Slim Eco (Nueva)" />
+          <h3>Laptop Ultra Slim Eco (Nueva)</h3>
+          <p>Extremadamente delgada y con batería de larga duración. Fabricación con mínima huella de carbono.</p>
+          <p><strong>Precio:</strong> $2,950,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_new_eco.jpg" alt="All-in-One EcoDisplay (Nuevo)" />
+          <h3>All-in-One EcoDisplay (Nuevo)</h3>
+          <p>Diseño todo-en-uno elegante y eficiente. Pantalla con bajo consumo y materiales reciclados en la carcasa.</p>
+          <p><strong>Precio:</strong> $3,500,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_new_eco.jpg" alt="Mini PC EcoConnect (Nuevo)" />
+          <h3>Mini PC EcoConnect (Nuevo)</h3>
+          <p>PC de tamaño reducido con gran eficiencia energética. Ideal para oficinas pequeñas o uso doméstico.</p>
+          <p><strong>Precio:</strong> $1,900,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_new_eco.jpg" alt="Laptop Convertible EcoFlex (Nueva)" />
+          <h3>Laptop Convertible EcoFlex (Nueva)</h3>
+          <p>Versatilidad 2-en-1 con enfoque en sostenibilidad. Batería optimizada y componentes duraderos.</p>
+          <p><strong>Precio:</strong> $3,300,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+      </div>
+
+      <!-- Sección de Equipos Remanufacturados -->
+      <h3>Equipos Remanufacturados</h3>
+      <div class="productos-lista">
+        <article class="producto-card">
+          <img src="images/laptop_reman_premium.jpg" alt="Laptop Remanufacturada Premium" />
+          <h3>Laptop Remanufacturada Premium</h3>
+          <p>Excelente rendimiento, revisada y con garantía. Una segunda vida para la tecnología.</p>
+          <p><strong>Precio:</strong> $1,600,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/pc_reman_potente.jpg" alt="PC Remanufacturado Potente" />
+          <h3>PC Remanufacturado Potente</h3>
+          <p>Ideal para trabajo y estudio, con componentes seleccionados por su durabilidad y eficiencia.</p>
+          <p><strong>Precio:</strong> $1,850,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <!-- Nuevos Equipos Corporativos Remanufacturados -->
+        <article class="producto-card">
+          <img src="images/placeholder_reman_laptop.jpg" alt="Laptop Corporativa HP EliteBook Remanufacturada" />
+          <h3>Laptop Corporativa HP EliteBook (Reman.)</h3>
+          <p>Modelo empresarial confiable, remanufacturado para ofrecer rendimiento sólido en tareas de oficina. Ideal para profesionales.</p>
+          <p><strong>Precio:</strong> $1,200,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_pc.jpg" alt="PC de Escritorio Dell OptiPlex Remanufacturado" />
+          <h3>PC de Escritorio Dell OptiPlex (Reman.)</h3>
+          <p>Equipo de escritorio compacto y eficiente, perfecto para entornos corporativos. Remanufacturado con garantía.</p>
+          <p><strong>Precio:</strong> $950,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_laptop.jpg" alt="Laptop Corporativa Lenovo ThinkPad Remanufacturada" />
+          <h3>Laptop Corporativa Lenovo ThinkPad (Reman.)</h3>
+          <p>Reconocida por su durabilidad y teclado ergonómico. Remanufacturada para una segunda vida productiva.</p>
+          <p><strong>Precio:</strong> $1,350,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_pc.jpg" alt="PC de Escritorio HP ProDesk Remanufacturado" />
+          <h3>PC de Escritorio HP ProDesk (Reman.)</h3>
+          <p>Solución de escritorio fiable y de bajo consumo. Remanufacturado y listo para tus tareas diarias.</p>
+          <p><strong>Precio:</strong> $880,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_laptop.jpg" alt="Laptop Corporativa Dell Latitude Remanufacturada" />
+          <h3>Laptop Corporativa Dell Latitude (Reman.)</h3>
+          <p>Diseñada para la movilidad y la productividad. Remanufacturada con componentes de calidad.</p>
+          <p><strong>Precio:</strong> $1,150,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_pc.jpg" alt="PC de Escritorio Lenovo ThinkCentre Remanufacturado" />
+          <h3>PC de Escritorio Lenovo ThinkCentre (Reman.)</h3>
+          <p>Equipo robusto y fácil de mantener. Remanufacturado para ofrecer un rendimiento estable.</p>
+          <p><strong>Precio:</strong> $920,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_laptop.jpg" alt="Laptop Corporativa Acer TravelMate Remanufacturada" />
+          <h3>Laptop Corporativa Acer TravelMate (Reman.)</h3>
+          <p>Ligera y funcional, ideal para viajes de negocio. Remanufacturada y optimizada.</p>
+          <p><strong>Precio:</strong> $1,050,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_pc.jpg" alt="PC de Escritorio AsusPro Remanufacturado" />
+          <h3>PC de Escritorio AsusPro (Reman.)</h3>
+          <p>Ofrece un buen equilibrio entre rendimiento y precio. Remanufacturado para extender su vida útil.</p>
+          <p><strong>Precio:</strong> $850,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_laptop.jpg" alt="Laptop Corporativa Fujitsu Lifebook Remanufacturada" />
+          <h3>Laptop Corporativa Fujitsu Lifebook (Reman.)</h3>
+          <p>Conocida por su fiabilidad. Remanufacturada y lista para entornos exigentes.</p>
+          <p><strong>Precio:</strong> $1,180,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+        <article class="producto-card">
+          <img src="images/placeholder_reman_pc.jpg" alt="PC de Escritorio HP Compaq Remanufacturado" />
+          <h3>PC de Escritorio HP Compaq (Reman.)</h3>
+          <p>Un clásico corporativo, remanufacturado para seguir siendo una opción económica y funcional.</p>
+          <p><strong>Precio:</strong> $800,000 COP</p>
+          <button type="button" class="toggle-image-upload-btn">Elegir Imagen</button>
+          <input type="file" class="image-upload-input" accept="image/*">
+        </article>
+
+      </div>
+
+      <a href="index.html" class="btn-ver-mas">Volver al Inicio</a>
+    </section>
+  </main>
+  <button class="btn-atras js-btn-volver">← Atrás</button>
+  <footer>
+    <p>&copy; 2025 JM-Tech - Tecnología Sostenible Armenia, Quindío</p>
+  </footer>
+</body>
+</html>
