@@ -1,0 +1,349 @@
+
+:root {
+  /* Paleta de Colores Sostenible */
+  --sds-verde-oscuro: #3E4A32;      /* Verde oliva oscuro, terroso */
+  --sds-verde-medio: #607848;       /* Verde oliva medio */
+  --sds-marron-oscuro: #4F3B31;     /* Marrón oscuro para texto principal */
+  --sds-marron-claro: #8A7A70;      /* Marrón grisáceo para bordes/texto secundario */
+  
+  --sds-fondo-body: #EFEBE4;        /* Terroso claro (beige grisáceo) para fondo de página */
+  --sds-fondo-main: #F7F5EF;        /* Terroso muy claro (beige casi blanco) para contenedor principal */
+  --sds-fondo-cards: #FCFCFA;       /* Blanco roto/Beige muy claro para tarjetas */
+  
+  --sds-acento-principal: #C8A064;  /* Ocre/Dorado apagado para acentos */
+  --sds-acento-claro: #F5E9D4;      /* Beige amarillento muy claro para brillos/acentos sutiles */
+  
+  --sds-blanco: #FFFFFF;            /* Blanco puro para contraste */
+  --sds-negro-suave: #333333;       /* Negro suave para texto alternativo si es necesario */
+  --sds-verde-claro-decor: #A8D5A3; /* Verde claro para fondos de elementos decorativos/tarjetas */
+  --sds-cafe-claro-cards: #E0CDB6;  /* Café claro para fondos de tarjetas */
+  --sds-verde-oliva-claro-cards: #C9CC85; /* Verde oliva claro para fondos de tarjetas */
+  --sds-cafe-terroso: #AF9A8A; /* Café terroso para fondos generales */
+  --sds-verde-fondo-main-suave: #D9EAD3; /* Verde muy suave para fondo de main */
+  --sds-verde-main-oliva-suave: #B5C18E; /* Verde oliva más oscuro y suave para main */
+
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --sombra-caja-base: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --sombra-caja-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  background-color: var(--sds-verde-medio);
+  color: var(--sds-marron-oscuro);
+}
+
+header {
+  background-color: var(--sds-verde-oscuro);
+  color: var(--sds-blanco);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--sds-verde-claro-decor); /* Color verde claro, más claro que el fondo del body */
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: var(--sds-blanco);
+  margin-left: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--sds-acento-principal);
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto; /* Espacio para destacar como caja */
+  background-color: var(--sds-verde-main-oliva-suave); 
+  border-radius: 12px; /* Consistencia con otras tarjetas */
+  box-shadow: var(--sombra-caja-base); /* Sombra para la caja principal */
+}
+
+h2 {
+  color: var(--sds-marron-oscuro);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center; /* Centra el texto del título */
+}
+
+.bienvenida-texto {
+  text-align: justify; /* Justifica el texto */
+  margin-bottom: 2rem; /* Añade un poco de espacio debajo del texto de bienvenida */
+}
+
+.productos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto-card {
+  background: var(--sds-verde-oliva-claro-cards);
+  border: 2px solid var(--sds-marron-oscuro); /* Borde oscuro remarcado */
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--sombra-caja-base);
+  color: var(--sds-marron-oscuro);
+  font-weight: 600;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.producto-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  max-height: 220px; /* Limita la altura máxima de las imágenes de producto */
+}
+ 
+.producto-card.resaltado {
+  box-shadow: 0 0 12px 3px var(--sds-acento-claro);
+  transform: scale(1.03);
+}
+
+input#filtro-productos {
+  display: block; /* Para permitir el centrado con margin auto */
+  width: 100%;
+  max-width: 400px; /* Reducimos el ancho máximo */
+  margin-left: auto; /* Centra el input si el contenedor es más ancho */
+  margin-right: auto; /* Centra el input si el contenedor es más ancho */
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid var(--sds-verde-medio);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  box-sizing: border-box; /* Para que padding y border no afecten el ancho total */
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  background-color: var(--sds-verde-medio);
+  color: var(--sds-blanco);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background-color: var(--sds-acento-principal);
+  color: var(--sds-marron-oscuro);
+}
+
+/* Estilos para las tarjetas de servicios */
+.servicios-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  list-style: none; /* Remover viñetas si se usa ul */
+  padding: 0; /* Remover padding si se usa ul */
+}
+
+.service-card-image {
+  width: 100%;
+  max-height: 200px; /* Altura máxima para imágenes de servicio */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  background-color: #f0f0f0; /* Color de fondo mientras carga o si no hay imagen */
+  display: none; /* Oculta si no hay src; JS la mostrará */
+}
+
+.servicio-card {
+  background-color: var(--sds-verde-oliva-claro-cards);
+  border: 2px solid var(--sds-marron-oscuro); /* Borde oscuro remarcado */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--sombra-caja-base);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-caja-hover);
+}
+
+.servicio-card h3 {
+  color: var(--sds-marron-oscuro); /* Título del servicio */
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-align: center; /* Centra el título del servicio */
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--sds-verde-oscuro);
+  color: var(--sds-blanco);
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+/* Botón atrás fijo en todas las páginas */
+.btn-atras {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--sds-verde-medio);
+  color: var(--sds-blanco);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.btn-atras:hover {
+  background-color: var(--sds-acento-principal);
+  color: var(--sds-marron-oscuro);
+}
+
+/* Estilos para la página de contacto */
+/* Contenedor principal de la información y el formulario */
+/* Estilos para la página de contacto */
+
+/* Estilos para la página de contacto */
+.contacto-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contacto-info {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes */
+  }
+  .contacto-info > div:first-child {
+    /* Añadir un borde a la derecha de la primera columna en pantallas grandes */
+    border-right: 1px solid var(--sds-marron-claro); /* Usar variable definida para el color del borde */
+    padding-right: 2rem; /* Espacio entre el borde y el contenido */
+  }
+}
+
+.contacto-info h3 {
+  color: var(--sds-marron-oscuro);
+  margin-bottom: 0.75rem;
+}
+
+.contacto-info p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.contacto-info a {
+  color: var(--sds-marron-oscuro);
+  text-decoration: none;
+}
+.contacto-info a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos específicos para el formulario de contacto */
+#formulario-contacto {
+  padding-left: 0; /* Asegurar que no haya padding extra si está en la segunda columna */
+}
+
+#formulario-contacto > div { /* Contenedor para agrupar label/input si es necesario */
+  margin-bottom: 1rem;
+}
+
+#formulario-contacto label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--sds-marron-claro);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem; /* Espacio después del campo, antes de la siguiente etiqueta */
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  color: var(--sds-marron-oscuro); /* Asegura que el color del texto sea consistente */
+}
+
+#formulario-contacto textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 120px; /* Altura mínima para el área de texto */
+}
+
+/* Estilos para el input de carga de imágenes */
+.image-upload-input {
+  display: none; /* Oculto por defecto, JS lo manejará */
+  font-size: 0.9em; /* Tamaño de fuente más pequeño */
+  margin-top: 0.5rem; /* Espacio si se muestra debajo del botón */
+}
+
+/* Botón para activar la subida de imagen */
+.toggle-image-upload-btn {
+  display: none; /* Oculto por defecto */
+  width: fit-content; /* Ajustar al contenido del texto */
+  margin: 0.75rem auto 0 auto; /* Margen superior, centrado horizontal, sin margen inferior */
+  padding: 0.5rem 1rem;
+  background-color: var(--sds-marron-claro);
+  color: var(--sds-blanco);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.toggle-image-upload-btn:hover {
+  background-color: var(--sds-marron-oscuro);
+}
+
+/* Mostrar el botón si el body tiene la clase admin-mode */
+body.admin-mode .toggle-image-upload-btn {
+  display: block;
+}
+
+/* Estilos para las tarjetas de tips en la página de inicio */
+.inicio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.inicio-card {
+  background-color: var(--sds-verde-oliva-claro-cards);
+  border: 2px solid var(--sds-marron-oscuro); /* Borde oscuro remarcado */
+  border-radius: 12px; /* Bordes redondeados consistentes */
+  padding: 1.5rem; /* Espaciado interno */
+  box-shadow: var(--sombra-caja-base); /* Sombra estandarizada */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.inicio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-caja-hover); /* Sombra hover estandarizada */
+}
+
+.inicio-card h3 {
+  color: var(--sds-marron-oscuro);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
